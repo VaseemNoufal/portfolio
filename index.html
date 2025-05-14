@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vaseem Noufal's Portfolio">
+    <title>Vaseem Noufal | Frontend Developer</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #f4f7fc;
+    color: #333;
+}
+
+.header {
+    background: linear-gradient(135deg, #5e72e4, #825ee4);
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #5e72e4;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #5e72e4;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+.about, .projects, .contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.projects .project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #5e72e4;
+    font-weight: bold;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+footer {
+    background-color: #5e72e4;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .projects .project-cards {
+        flex-direction: column;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="intro">
+            <h1>Hello, I'm Vaseem Noufal</h1>
+            <p>Frontend Developer | Passionate about creating interactive websites</p>
+            <a href="#projects" class="cta-btn">View My Work</a>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a passionate frontend developer with a keen interest in building innovative websites. I love crafting clean, responsive designs using modern web technologies like HTML, CSS, JavaScript, React, and Tailwind CSS. I aim to create meaningful user experiences that bring ideas to life.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-cards">
+            <div class="card">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project One</h3>
+                <p>Description of project one.</p>
+                <a href="#" class="project-link">See More</a>
+            </div>
+            <div class="card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>Description of project two.</p>
+                <a href="#" class="project-link">See More</a>
+            </div>
+            <div class="card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>Description of project three.</p>
+                <a href="#" class="project-link">See More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form" action="submit-form" method="POST">
+            <input type="text" placeholder="Your Name" name="name" required>
+            <input type="email" placeholder="Your Email" name="email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Vaseem Noufal. All rights reserved.</p>
+    </footer>
+    <script>
+        // Example script for a simple page animation on load
+document.addEventListener('DOMContentLoaded', () => {
+    const introText = document.querySelector('.intro');
+    introText.classList.add('animate');
+});
+
+// Add animation class in CSS
+document.styleSheets[0].insertRule(`
+    .animate {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 1s ease-in-out;
+    }
+`, document.styleSheets[0].cssRules.length);
+
+document.styleSheets[0].insertRule(`
+    .intro {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+`, document.styleSheets[0].cssRules.length);
+
+    </script>
+    <script src="https://vaseemschatbox.vercel.app/finale.js"></script>
+</body>
+</html>
